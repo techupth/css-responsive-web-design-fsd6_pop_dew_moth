@@ -1,1 +1,150 @@
 /* Start coding here */
+* {
+  font-family: "Kanit", sans-serif;
+  color: #183b56;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.flex-container,
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.highlight-text {
+  background-image: linear-gradient(
+    to top,
+    rgba(243, 156, 18, 0.5) 50%,
+    rgb(254, 254, 254) 50%
+  );
+  padding: 0 5px;
+}
+
+.all-card-top,
+.all-card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.active > .card-icon {
+  background-color: rgba(243, 156, 18, 1);
+}
+
+.active > .card-icon > .material-symbols-outlined {
+  color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: rgb(254, 254, 254);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 150px;
+}
+
+.card-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: rgba(243, 156, 18, 1);
+  border: 1px solid rgba(243, 156, 18, 1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 150px;
+}
+
+.card-more > .card-title > .more {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  margin: 30px;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(243, 156, 18, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.card-icon > .material-symbols-outlined {
+  color: rgba(243, 156, 18, 1);
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.card-footer > div {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 1;
+}
+
+.more > .more-title {
+  color: white;
+  width: 60px;
+}
+
+.more > .material-symbols-outlined {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .all-card-top,
+  .all-card-bottom {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    width: 40vw;
+  }
+
+  .card-more {
+    width: 40vw;
+  }
+}
